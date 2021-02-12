@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtView1">Your profile</string>
+    <string name="txtView2">Your name:</string>
+    <string name="EditTxt1">Enter your name</string>
+    <string name="txtView3">Your email:</string>
+    <string name="EditTxt2">Please enter your email</string>
+    <string name="txtView4">your picture:</string>
+    <string name="txtView5">Click the button above to take a picture</string>
+</resources>
