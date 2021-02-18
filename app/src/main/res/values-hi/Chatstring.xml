@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="TextViewText">Meera GUI dheekho</string>
-    <string name="CheckBoxText">Iski janch karo</string>
-    <string name="ButtonText2">Yaham click karoo</string>
-    <string name="SwitchText">Switch off ya Onn</string>
-    <string name="EditText">Yaha type karo</string>
-    <string name="toast_message">baki jaankari yaha</string>
-</resources>
