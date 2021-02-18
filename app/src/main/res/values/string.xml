@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textView">Look at my GUI</string>
+    <string name="ButtonText2">CLICK HERE</string>
+    <string name="CheckBoxText">Check this out!</string>
+    <string name="SwitchText">Switch on/off</string>
+    <string name="EditText">Type here</string>
+    <string name="toast_message">Here is more information</string>
+    <string name="snack_bar">The Switch is now</string>
+    </resources>

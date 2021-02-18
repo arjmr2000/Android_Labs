@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="textView">Olhe para a minha GUI</string>
+    <string name="ButtonText2">CLIQUE AQUI</string>
+    <string name="CheckBoxText">Veja isso!</string>
+    <string name="SwitchText">Ligar / desligar</string>
+    <string name="EditText">Digite aqui</string>
+    <string name="toast_message">Aqui estão mais informações</string>
+    <string name="snack_bar">A mudança é agora</string>
+
+
+</resources>

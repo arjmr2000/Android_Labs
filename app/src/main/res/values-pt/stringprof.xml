@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtView1">Seu perfil</string>
+    <string name="txtView2">Seu nome:</string>
+    <string name="EditTxt1">Digite seu nome</string>
+    <string name="txtView3">Seu email:</string>
+    <string name="EditTxt2">Por favor introduza o seu e-mail</string>
+    <string name="txtView4">sua foto:</string>
+    <string name="txtView5">Clique no botão acima para tirar uma foto</string>
+    <string name="button2">Vá para o chat</string>
+    <string name="Dialog">Você quer deletar isto?</string>
+    <string name="database">O id do banco de dados: </string>
+    <string name="selection">A linha selecionada é: </string>
+</resources>
+
