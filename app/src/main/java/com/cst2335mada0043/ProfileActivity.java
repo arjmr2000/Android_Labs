@@ -37,7 +37,12 @@ public class ProfileActivity extends AppCompatActivity {
             if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             }
+        });
+        Button ChatButton = (Button) findViewById(R.id.button2);
+        ChatButton.setOnClickListener( c -> {
 
+            Intent goToProfile  = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+            startActivityForResult( goToProfile,345);
         });
     }
 

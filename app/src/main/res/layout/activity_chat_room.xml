@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myLayout">
+    <Button
+        android:id="@+id/RcvBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="receive"
+        />
+    <EditText
+        android:id="@+id/Txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type here"
+        android:layout_toEndOf="@+id/RcvBtn"
+        android:layout_toStartOf="@+id/SndBtn"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/SndBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="send"
+        />
+
+    <ListView
+        android:id="@+id/ListView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/Txt1"
+        />
+</RelativeLayout>
