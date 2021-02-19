@@ -29,7 +29,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         listItems =  new ArrayList<Message>();
 
         myList.setAdapter(adapter);
-        myList.setOnItemLongClickListener((p, b, pos, id) -> {
+        myList.setOnItemLongClickListener((p, b, pos, id) -> {//deleting listview start
 
                 Message message=listItems.get(pos);
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -44,8 +44,8 @@ public class ChatRoomActivity extends AppCompatActivity {
                     })
                     .setNegativeButton("No", (click, arg) -> { }).create().show();
                 return true;
-        });
-        sndButton.setOnClickListener(new View.OnClickListener() {
+        });//end
+        sndButton.setOnClickListener(new View.OnClickListener() {//snding msg
 
             public void onClick(View v) {
                 listItems.add( new Message(((EditText) findViewById(R.id.Txt1)).getText().toString(), 1, true));
@@ -53,7 +53,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                 editText.getText().clear();
             }
         });
-        rcvButton.setOnClickListener(new View.OnClickListener() {
+        rcvButton.setOnClickListener(new View.OnClickListener() {//rcving msg
 
             public void onClick(View v) {
                 listItems.add(new Message(((EditText) findViewById(R.id.Txt1)).getText().toString(), 1, false));
@@ -76,11 +76,11 @@ public class ChatRoomActivity extends AppCompatActivity {
             LayoutInflater inflater = getLayoutInflater();
             Message message=listItems.get(position);
             View newView=null;
-            if(message.send){
+            if(message.send){//goes to snd activity
                 newView = inflater.inflate(R.layout.sender_activity, parent, false);
                 TextView tView = newView.findViewById(R.id.SndTxt);
                 tView.setText(message.msg );
-            }else{
+            }else{//goes to recv activity
                 newView = inflater.inflate(R.layout.reciever_activity, parent, false);
                 TextView tView = newView.findViewById(R.id.RcvTxt);
                 tView.setText(message.msg );

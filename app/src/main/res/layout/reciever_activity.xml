@@ -11,7 +11,7 @@
             android:id="@+id/RcvImg"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/reciever"
+            android:src="@drawable/row_reciever"
             />
         <EditText
             android:id="@+id/RcvTxt"
