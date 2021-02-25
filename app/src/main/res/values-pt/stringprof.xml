@@ -11,5 +11,6 @@
     <string name="Dialog">Você quer deletar isto?</string>
     <string name="database">O id do banco de dados: </string>
     <string name="selection">A linha selecionada é: </string>
+    <string name="insertion">Inserted item id:</string>
 </resources>
 
