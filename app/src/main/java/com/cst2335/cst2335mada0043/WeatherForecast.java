@@ -166,10 +166,10 @@ public class WeatherForecast extends AppCompatActivity {
         }
 
         public void onPostExecute(String fromDoInBackground) {
-            current.setText(currentTemp);
-            min.setText(minimum);
-            max.setText(maximum);
-            uv.setText(currentUV);
+            current.setText("Current Temperature : "+currentTemp);
+            min.setText("Minimum Temperature : "+minimum);
+            max.setText("Maximum Temperature : "+maximum);
+            uv.setText("UV Rating : "+currentUV);
             weather.setImageBitmap(currentWeather);
             progressBar.setVisibility(View.INVISIBLE);
 
