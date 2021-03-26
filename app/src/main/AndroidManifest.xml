@@ -16,7 +16,13 @@
 
         <activity android:name=".EmptyActivity"/>
         <activity android:name=".WeatherForecast" />
-<activity android:name=".activity_profile"></activity>
+<activity android:name=".activity_profile">
+    <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+
+    <category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+    </activity>
         <activity android:name=".ChatRoomActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
