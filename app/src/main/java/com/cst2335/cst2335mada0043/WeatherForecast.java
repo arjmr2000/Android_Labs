@@ -42,14 +42,14 @@ public class WeatherForecast extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_forecast);
 
-        progressBar = findViewById(R.id.progress);
+        progressBar = findViewById(R.id.bar1);
         progressBar.setVisibility(View.VISIBLE);
 
-        current = findViewById(R.id.currentTempText);
-        min = findViewById(R.id.minTempText);
-        max = findViewById(R.id.maxTempText);
-        uv = findViewById(R.id.uvRatingText);
-        weather = findViewById(R.id.currentWeather);
+        current = findViewById(R.id.Current);
+        min = findViewById(R.id.Min);
+        max = findViewById(R.id.Max);
+        uv = findViewById(R.id.UV);
+        weather = findViewById(R.id.picture);
 
         ForecastQuery req = new ForecastQuery();
         req.execute("https://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=7e943c97096a9784391a981c4d878b22&mode=xml&units=metric");
@@ -164,14 +164,36 @@ public class WeatherForecast extends AppCompatActivity {
         public void onProgressUpdate(Integer... args) {
             progressBar.setProgress(args[0]);
         }
-
+        @Override
         public void onPostExecute(String fromDoInBackground) {
-            current.setText("Current Temperature : "+currentTemp);
-            min.setText("Minimum Temperature : "+minimum);
-            max.setText("Maximum Temperature : "+maximum);
-            uv.setText("UV Rating : "+currentUV);
+            super.onPostExecute(fromDoInBackground);
+            current.setText("currentTemp:"+ Math.round(Float.parseFloat(currentTemp)));
+            min.setText("Minimum:"+Math.round(Float.parseFloat(minimum)));
+            max.setText("maximum:"+Math.round(Float.parseFloat(maximum)));
+            uv.setText("currentUV:"+ Math.round(Float.parseFloat(currentUV)));
             weather.setImageBitmap(currentWeather);
-            progressBar.setVisibility(View.INVISIBLE);
+           progressBar.setVisibility(View.INVISIBLE);
+       /* protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            TextView minText=findViewById(R.id.Min);
+            minText.setText(getString(R.string.Min)+" : "+min);
+
+            TextView maxText=findViewById(R.id.Max);
+            maxText.setText(getString(R.string.Max)+" : "+max);
+
+            TextView currentText=findViewById(R.id.Current);
+            currentText.setText(getString(R.string.Current)+" : "+current);
+
+            TextView UVtext=findViewById(R.id.UV);
+            UVtext.setText(getString(R.string.UV)+" : "+uv);
+
+            ImageView pic=findViewById(R.id.picture);
+            pic.setImageBitmap(currentWeather);
+
+            ProgressBar bar=findViewById(R.id.bar1);
+            bar.setVisibility(View.INVISIBLE);*/
+
 
         }
     }

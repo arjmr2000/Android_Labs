@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myLayout">
+    <Button
+        android:id="@+id/SndBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="send"
+        />
+    <Button
+        android:id="@+id/RcvBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="receive"
+        android:layout_toStartOf="@+id/fragmentLocation"
+        />
+
+    <EditText
+        android:id="@+id/Txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Type here"
+        android:layout_toEndOf="@+id/SndBtn"
+        android:layout_toStartOf="@+id/RcvBtn"
+        android:layout_alignParentBottom="true"/>
+
+    <ListView
+        android:id="@+id/ListView1"
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/Txt1" />
+
+    <TextView
+        android:id="@+id/row_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ListView1"
+        />
+    <FrameLayout
+        android:id="@+id/fragmentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/ListView1"
+        />
+</RelativeLayout>

@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.gridlayout.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:columnCount="2"
+    app:rowCount="5"
+    app:layout_columnWeight="1"
+    app:layout_gravity="fill">
 
     <TextView
-        android:id="@+id/txt"
+        android:id="@+id/TextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt"
         android:textSize="20dp"
-        />
+        app:layout_columnSpan="2"
+        android:text="@string/Email" />
+
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        app:layout_columnSpan="2"
+        android:textSize="28dp"
         android:inputType="textEmailAddress"
-        android:hint="@string/editTextTextEmailAddress"/>
+        android:hint="@string/TypeEmail"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:textSize="20dp"
+        app:layout_columnSpan="2"
+        android:text="@string/Password" />
+
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:inputType="textPassword"
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        app:layout_columnSpan="2" />
+
     <Button
-        android:id="@+id/login"
+        android:id="@+id/button1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="login"
-        />
-</LinearLayout>
+        android:text="@string/Button1"
+        android:textSize="20dp"/>
+
+</androidx.gridlayout.widget.GridLayout>

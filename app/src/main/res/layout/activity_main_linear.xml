@@ -1,81 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/Abdul"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:rotationX="0"
+    android:rotationY="0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textView"
+        android:textSize="30sp" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/textView"
-            android:textSize="30dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="51dp"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="1dp"
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:layout_weight="1"
-            android:gravity="fill"
-            android:text="@string/ButtonText2" />
+            android:backgroundTint="@color/black"
+            android:text="@string/Button" />
 
         <CheckBox
             android:id="@+id/checkBox"
-            android:layout_width="5dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:layout_weight="1"
-            android:gravity="fill"
-            android:text="@string/CheckBoxText" />
+            android:text="@string/checkBox" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:layout_weight="1"
-            app:srcCompat="@drawable/flag"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/flag"/>
 
         <Switch
             android:id="@+id/switch1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:layout_weight="1"
-            android:text="@string/SwitchText"
-            android:checked="true"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="textPersonName"
-            android:hint="@string/EditText"
-            android:importantForAutofill="no" />
+            android:text="@string/switch1" />
     </LinearLayout>
+
+    <EditText
+        android:inputType="textPersonName"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textView2" />
 
 
 </LinearLayout>
