@@ -120,23 +120,17 @@ public class ChatRoomActivity extends AppCompatActivity {
             }
         });
 
-        sndButton.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Message message= new Message(((EditText) findViewById(R.id.Txt1)).getText().toString(), 1, true);
-                db.addMessage(message);
-                loadMessage();
-                editText.getText().clear();
-            }
+        sndButton.setOnClickListener(v -> {
+            Message message= new Message(((EditText) findViewById(R.id.Txt1)).getText().toString(), 1, true);
+            db.addMessage(message);
+            loadMessage();
+            editText.getText().clear();
         });
-        rcvButton.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Message message= new Message(((EditText) findViewById(R.id.Txt1)).getText().toString(), 1, false);
-                db.addMessage(message);
-                loadMessage();
-                editText.getText().clear();
-            }
+        rcvButton.setOnClickListener(v -> {
+            Message message= new Message(((EditText) findViewById(R.id.Txt1)).getText().toString(), 1, false);
+            db.addMessage(message);
+            loadMessage();
+            editText.getText().clear();
         });
 
     }
