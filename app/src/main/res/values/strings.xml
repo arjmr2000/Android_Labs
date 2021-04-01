@@ -37,5 +37,10 @@
     <string name="Max">Max</string>
     <string name="Current">Current</string>
     <string name="UV">UV</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="weather_forecast">Weather Forecast</string>
 
 </resources>

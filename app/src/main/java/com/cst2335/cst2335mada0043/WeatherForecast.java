@@ -80,7 +80,7 @@ public class WeatherForecast extends AppCompatActivity {
 
                 while (eventType != XmlPullParser.END_DOCUMENT) {
 
-                    if (eventType == XmlPullParser.START_TAG) {
+                     if (eventType == XmlPullParser.START_TAG) {
                         //If you get here, then you are pointing at a start tag
                         if (xpp.getName().equals("temperature")) {
                             minimum = xpp.getAttributeValue(null, "min");
@@ -167,34 +167,12 @@ public class WeatherForecast extends AppCompatActivity {
         @Override
         public void onPostExecute(String fromDoInBackground) {
             super.onPostExecute(fromDoInBackground);
-            current.setText("currentTemp:"+ Math.round(Float.parseFloat(currentTemp)));
-            min.setText("Minimum:"+Math.round(Float.parseFloat(minimum)));
-            max.setText("maximum:"+Math.round(Float.parseFloat(maximum)));
-            uv.setText("currentUV:"+ Math.round(Float.parseFloat(currentUV)));
+            current.setText("currentTemp:  "+ Math.round(Float.parseFloat(currentTemp)));
+            min.setText("Minimum:  "+Math.round(Float.parseFloat(minimum)));
+            max.setText("maximum:  "+Math.round(Float.parseFloat(maximum)));
+            uv.setText("currentUV:  "+ Math.round(Float.parseFloat(currentUV)));
             weather.setImageBitmap(currentWeather);
            progressBar.setVisibility(View.INVISIBLE);
-       /* protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-
-            TextView minText=findViewById(R.id.Min);
-            minText.setText(getString(R.string.Min)+" : "+min);
-
-            TextView maxText=findViewById(R.id.Max);
-            maxText.setText(getString(R.string.Max)+" : "+max);
-
-            TextView currentText=findViewById(R.id.Current);
-            currentText.setText(getString(R.string.Current)+" : "+current);
-
-            TextView UVtext=findViewById(R.id.UV);
-            UVtext.setText(getString(R.string.UV)+" : "+uv);
-
-            ImageView pic=findViewById(R.id.picture);
-            pic.setImageBitmap(currentWeather);
-
-            ProgressBar bar=findViewById(R.id.bar1);
-            bar.setVisibility(View.INVISIBLE);*/
-
-
         }
     }
 }

@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 public class activity_profile extends AppCompatActivity {
     private static final String ACTIVITY_NAME="activity_profile";
     static final int REQUEST_IMAGE_CAPTURE=1;
+    Intent fromMain;
+    String Num;
 
    // @Override
    // protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,11 @@ public class activity_profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         EditText emailEditText=(EditText)findViewById(R.id.editText1) ;
 
-        Intent fromMain=getIntent();
+        fromMain=getIntent();
         String recievedEmail= fromMain.getStringExtra("EMAIL");
         emailEditText.setText(recievedEmail);
+
+
 
 
         ImageButton takePictureBtn = (ImageButton) findViewById(R.id.button2);
@@ -57,10 +61,20 @@ public class activity_profile extends AppCompatActivity {
             Intent goToWeather  = new Intent(activity_profile.this, WeatherForecast.class);
             startActivityForResult( goToWeather,345);
         });
+        Button toolBatBtn = (Button) findViewById(R.id.button5);
+        toolBatBtn.setOnClickListener( c -> {
+
+            Intent goToToolbar  = new Intent(activity_profile.this, TestToolbar.class);
+            startActivityForResult( goToToolbar,345);
+        });
     }
-    @Override
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Num = fromMain.getStringExtra("Number");
+        if(Num!="500"){
+            finish();
+        }
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
@@ -69,6 +83,7 @@ public class activity_profile extends AppCompatActivity {
         }
         Log.d(ACTIVITY_NAME, "In function: onActivityResult()");
     }
+
     @Override
     protected void onStart() {
         super.onStart();

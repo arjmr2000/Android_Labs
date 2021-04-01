@@ -1,3 +1,27 @@
 <resources>
     <string name="hello_world">Hello Round World!</string>
+    <string name="Hello_message">Hello_message</string>
+    <string name="ButtonText">ButtonText</string>
+    <string name="hello_message">hello_message</string>
+    <string name="Email">Email</string>
+    <string name="TypeEmail">TypeEmail</string>
+    <string name="Password">Password</string>
+    <string name="Button1">Button1</string>
+    <string name="Profile">Profile</string>
+    <string name="Name">Name</string>
+    <string name="EnterName">EnterName</string>
+    <string name="YourEmail">YourEmail</string>
+    <string name="EnterEmail">EnterEmail</string>
+    <string name="Picture">Picture</string>
+    <string name="TakePicture">TakePicture</string>
+    <string name="Dialog">Dialog</string>
+    <string name="selection">selection</string>
+    <string name="database">database</string>
+    <string name="Min">Min</string>
+    <string name="Max">Max</string>
+    <string name="Current">Current</string>
+    <string name="UV">UV</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
 </resources>
